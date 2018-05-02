@@ -107,7 +107,32 @@ html, body, h1, h2, h3, h4, h5, h6 {
           <th>10.7%</th>
         </tr>
       </table>
+
       <p class="w3-text-grey">From looking at the results of this logistic regression, we can see that the shot clock, number of dribbles, and the closest defender distance are all positively correlated with shot makes while touch time and shot distance are negatively correlated with shot makes. However, it does not look like there is a strong correlation between any o these variables. Among the selected attributes, closest defender distance is the most correlated with shot makes, while time on the shot clock and the number of dribbles taken don't seem to be correlated very much if at all. This seems to indicate that none of these quantitative factors have much of an effect on shot makes, which may be what is contributing to the relatively low prediction accuracy of the model.</p>
+
+      <h5 class="w3-padding-32">Confusion Matrix</h5>
+      <table class="w3-table w3-bordered">
+        <tr>
+          <th></th>
+          <th>Made</th>                 
+          <th>Missed</th>
+        </tr>
+        <tr>
+          <th>Made</th>
+          <th>5004</th>
+          <th>1740</th>
+        </tr>
+        <tr>
+          <th>Missed</th>
+          <th>3039</th>
+          <th>2467</th>
+        </tr>
+      </table>
+      <br>
+      <p class="w3-text-grey">Above is the confusion matrix created by running the logistic regression on test data. Below is the precision, recall, f1-score, and support. Although the model is not a strong classifier overall, it is markedly better at predicting makes, as it has a significantly higher recall and f1-scpre than for misses. This gives us some insight on the problem we are trying to solve. It seems like there is a moderate relationship between our attributes and how they are affect shot makes.</p>
+
+      <img src="./lrscores.png">
+
     </div>
   </div>
 </div>
