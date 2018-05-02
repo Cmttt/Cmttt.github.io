@@ -45,12 +45,105 @@ html, body, h1, h2, h3, h4, h5, h6 {
 <!-- First Grid -->
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
-    <div class="w3-twothird">
+    <div class="w3-threequarter">
       <h1>Data Quality</h1>
       <h5 class="w3-padding-32">Completeness</h5>
       <p class="w3-text-grey">The dataset comes from kaggle but is also scraped directly from the NBA.com/stats API. There are roughly 128,069 rows of data (total shots tracked). Roughly 5,500 of these rows contain null data and were excluded for the purposes of this project. As a result, the data includes information about 95% of the shots taken during the 2014-2015 season, a reasonably large sample size for testing and training.</p>
       <h5 class="w3-padding-32">Correctness & Coherency</h5>
-      <p class="w3-text-grey">Rows were spot checked to game logs and determined to be correct. Additionally, the information found during the initial scoping of the data was on par with expectations in terms of numbers as well as correlation. It would take too long to manually confirm each entry, but the numbers seem to be coherent and match with expectations.</p>
+      <p class="w3-text-grey">Rows were spot checked to game logs and determined to be correct. Additionally, the information found during the initial scoping of the data was on par with expectations in terms of numbers as well as correlation. It would take too long to manually confirm each entry, but the numbers seem to be coherent and match with expectations. Below is a table showing the descriptive statistics of the relevant selected attributes.</p>
+
+      <table class="w3-table w3-bordered">
+        <tr>
+          <th>Attribute</th>
+          <th>Shot Clock</th>
+          <th>Dribbles</th>
+          <th>Touch Time</th>
+          <th>Shot Dist</th>
+          <th>Pts Type</th>
+          <th>Shot Result</th>
+          <th>Close Def Dist</th>
+        </tr>
+        <tr>
+          <th>Count</th>
+          <th>122502</th>
+          <th>122502</th>
+          <th>122502</th>
+          <th>122502</th>
+          <th>122502</th>
+          <th>122502</th>
+          <th>122502</th>
+        </tr>
+        <tr>
+          <th>Mean</th>
+          <th>12.453</th>
+          <th>1.989</th>
+          <th>2.748</th>
+          <th>13.444</th>
+          <th>2.258</th>
+          <th>0.456</th>
+          <th>4.122</th>
+        </tr>
+        <tr>
+          <th>Stdev</th>
+          <th>5.763</th>
+          <th>3.411</th>
+          <th>2.967</th>
+          <th>8.777</th>
+          <th>0.438</th>
+          <th>0.498</th>
+          <th>2.752</th>
+        </tr>
+        <tr>
+          <th>Min</th>
+          <th>0</th>
+          <th>0</th>
+          <th>-100.5</th>
+          <th>0</th>
+          <th>2</th>
+          <th>0</th>
+          <th>0</th>
+        </tr>
+        <tr>
+          <th>25% Percentile</th>
+          <th>8.2</th>
+          <th>0</th>
+          <th>0.9</th>
+          <th>4.7</th>
+          <th>2</th>
+          <th>0</th>
+          <th>2.3</th>
+        </tr>
+        <tr>
+          <th>50% Percentile</th>
+          <th>12.3</th>
+          <th>1</th>
+          <th>1.6</th>
+          <th>13.4</th>
+          <th>2</th>
+          <th>0</th>
+          <th>3.7</th>
+        </tr>
+        <tr>
+          <th>75% Percentile</th>
+          <th>16.675</th>
+          <th>2</th>
+          <th>3.7</th>
+          <th>22.4</th>
+          <th>3</th>
+          <th>1</th>
+          <th>5.3</th>
+        </tr>
+        <tr>
+          <th>Max</th>
+          <th>24</th>
+          <th>32</th>
+          <th>24.9</th>
+          <th>43.5</th>
+          <th>3</th>
+          <th>1</th>
+          <th>53.2</th>
+        </tr>
+      </table>
       <h5 class="w3-padding-32">Accountability</h5>
       <p class="w3-text-grey">The data comes directly from the NBA.com/stats API, so it should be trustworthy.</p>
     </div>

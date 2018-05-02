@@ -45,15 +45,13 @@ html, body, h1, h2, h3, h4, h5, h6 {
 <!-- First Grid -->
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
-    <div class="w3-twothird">
-      <h1>Lorem Ipsum</h1>
-      <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+    <div class="w3-threequarter">
+    <h1>Results</h1>
+      <p class="w3-text-grey">The models that were fit include: logistic regression, linear discriminant analysis, kNN, CART, NB, and SVM. The models were fit and tested using 10 fold cross validation. Logistic regression was used as the prediction model as it managed to predict with the highest accuracy. However, it must be noted that none of the models predicted particularly well. Logistic regression was only able to predict shot makes with 60.6% accuracy which is only 10% higher than random selection. The other models performed even more poorly. Below is a box plot that displays a comparison of the test accuracy calculated using cross-validation for the different prediction models fit on the dataset.</p>  
 
-      <img src="./nbacorrelation.png" height="750" width="750">
+      <img src="./algcomp.png" height="500" width="500">
 
-      <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p class="w3-text-grey">As you can see, logistic regression and linear discriminant analysis performed the best. The decision tree classifier (CART) and k-nearest neighbors performed only slightly better than random chance, and naive bayes fell behind simple logistic regression and linear discriminant analysis. </p> 
     </div>
 
     <div class="w3-third w3-center">
@@ -68,35 +66,51 @@ html, body, h1, h2, h3, h4, h5, h6 {
     <div class="w3-third w3-center">
       <i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>
     </div>
-
-    <div class="w3-twothird">
-      <h1>Lorem Ipsum</h1>
-      <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
-
-      <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <div class="w3-threequarter">
+      <h1>Logistic Regression</h1>
+      <h5 class="w3-padding-32">Summary of logistic regression co-efficients</h5>
+      <table class="w3-table w3-bordered">
+        <tr>
+          <th></th>
+          <th>Intercept</th>                 
+          <th>Shot Clock</th>
+          <th>Dribbles</th>
+          <th>Touch Time</th>
+          <th>Shot Dist</th>
+          <th>Close Def Dist</th>
+        </tr>
+        <tr>
+          <th>Co-Efficiencts</th>
+          <th>0.11205131</th>
+          <th>0.0151166</th>
+          <th>0.02581338</th>
+          <th>-0.05661155</th>
+          <th>-0.0600544</th>
+          <th>0.10205662</th>
+        </tr>
+        <tr>
+          <th>Log Co-Efficients</th>
+          <th>1.11857025301</th>
+          <th>1.0152314337</th>
+          <th>1.0261494306</th>
+          <th>0.9449610682</th>
+          <th>0.94171330298</th>
+          <th>1.10744617356</th>
+        </tr>
+        <tr>
+          <th>Percentage</th>
+          <th>12%</th>
+          <th>1.5%</th>
+          <th>2.6</th>
+          <th>-5.5%</th>
+          <th>-5.8%</th>
+          <th>10.7%</th>
+        </tr>
+      </table>
+      <p class="w3-text-grey">From looking at the results of this logistic regression, we can see that the shot clock, number of dribbles, and the closest defender distance are all positively correlated with shot makes while touch time and shot distance are negatively correlated with shot makes. However, it does not look like there is a strong correlation between any o these variables. Among the selected attributes, closest defender distance is the most correlated with shot makes, while time on the shot clock and the number of dribbles taken don't seem to be correlated very much if at all. This seems to indicate that none of these quantitative factors have much of an effect on shot makes, which may be what is contributing to the relatively low prediction accuracy of the model.</p>
     </div>
   </div>
 </div>
-
-<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-    <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
-</div>
-
-<!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center w3-opacity">  
-  <div class="w3-xlarge w3-padding-32">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
- </div>
- <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-</footer>
-
 <script>
 // Used to toggle the menu on small screens when clicking on the menu button
 function myFunction() {
