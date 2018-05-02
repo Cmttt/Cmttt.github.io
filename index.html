@@ -25,7 +25,7 @@ html, body, h1, h2, h3, h4, h5, h6 {
 
 <!-- Navbar -->
 <div class="w3-top">
-  <div class="w3-bar w3-blue w3-card w3-left-align w3-large">
+  <div class="w3-bar w3-black w3-card w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-blue" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="https://cmttt.github.io/index.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
     <a href="https://cmttt.github.io/explore.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Explore</a>
@@ -90,13 +90,16 @@ html, body, h1, h2, h3, h4, h5, h6 {
 
       <img src="./shotcorr.png" height="600" width="600">
 
-      <p class="w3-text-grey">Point type was taken out of the machine learning models as this is somewhat already taken care of by shot distance. The models were run with both touch time and dribbles as well as one over the other and we noted no real differences in results. The models that were fit include: logistic regression, linear discriminant analysis, kNN, CART, NB, and SVM. The models were fit and tested using 10 fold cross validation. Logistic regression was used as the prediction model as it managed to predict with the highest accuracy. However, it must be noted that none of the models predicted particularly well. Logistic regression was only able to predict shot makes with 60.6% accuracy which is only 10% higher than random selection. The other models performed even more poorly.</p>  
+      <p class="w3-text-grey">Point type was taken out of the machine learning models as this is somewhat already taken care of by shot distance. The models were run with both touch time and dribbles as well as one over the other and we noted no real differences in results. Player_id was also not used in the models as there are simply too many players to turn this into a categorical variable. For the purposes of this project, we wanted to focus on the strictly measurable statisitics that influence shot making. Obviously, other factors such as the defender and attributes of the defender will also influence shot making, but these factors are not considered in the models that were run. The models that were fit include: logistic regression, linear discriminant analysis, kNN, CART, NB, and SVM. The models were fit and tested using 10 fold cross validation. Logistic regression was used as the prediction model as it managed to predict with the highest accuracy. However, it must be noted that none of the models predicted particularly well. Logistic regression was only able to predict shot makes with 60.6% accuracy which is only 10% higher than random selection. The other models performed even more poorly. Below is a bar chart that displays a comparison of the test accuracy calculated using cross-validation for the different prediction models fit on the dataset.</p>  
+
+      <img src="./algcomp.png" height="500" width="500">
+
     </div>
   </div>
 </div>
 
 <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-    <h1 class="w3-margin w3-xlarge">What makes a shot?</h1>
+    <h1 class="w3-margin w3-orange w3-xlarge">What influences shot making?</h1>
 </div>
 
 <!-- Footer -->

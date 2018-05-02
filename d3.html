@@ -15,7 +15,7 @@ var pack = d3.pack()
     .size([width, height])
     .padding(1.5);
 
-d3.csv("file://shot_logs3.csv", function(d) {
+d3.csv("shot_logs2.csv", function(d) {
   d.value = +d.value;
   if (d.value) return d;
 }, function(error, classes) {
