@@ -48,7 +48,7 @@ html, body, h1, h2, h3, h4, h5, h6 {
     <div class="w3-threequarter">
       <h1>Data Quality</h1>
       <h5 class="w3-padding-32">Completeness</h5>
-      <p class="w3-text-grey">The dataset comes from kaggle but is also scraped directly from the NBA.com/stats API. There are roughly 128,069 rows of data (total shots tracked). Roughly 5,500 of these rows contain null data and were excluded for the purposes of this project. As a result, the data includes information about 95% of the shots taken during the 2014-2015 season, a reasonably large sample size for testing and training.</p>
+      <p class="w3-text-grey">There are two datasets in this final project. The first dataset comes from kaggle but is also scraped directly from the NBA.com/stats API. There are roughly 128,069 rows of data (total shots tracked). Roughly 5,500 of these rows contain null data and were excluded for the purposes of this project. As a result, the data includes information about 95% of the shots taken during the 2014-2015 season, a reasonably large sample size for testing and training. The second data we use comes from the stat-nba website, one of the largest NBA dataset in China. The dataset include 30 NBA teams’ stats from 1980 to 2018 including the points, steals, blocks, assists and turnovers, etc. We deleted teams that doesn’t exist in 2018 like Vancouver grizzlies. And merged the teams that changed names or city into one team like Seattle Sonics and Oklahoma Thunder. So the data is complete.</p>
       <h5 class="w3-padding-32">Correctness & Coherency</h5>
       <p class="w3-text-grey">Rows were spot checked to game logs and determined to be correct. Additionally, the information found during the initial scoping of the data was on par with expectations in terms of numbers as well as correlation. It would take too long to manually confirm each entry, but the numbers seem to be coherent and match with expectations. Below is a table showing the descriptive statistics of the relevant selected attributes.</p>
 
@@ -144,8 +144,9 @@ html, body, h1, h2, h3, h4, h5, h6 {
           <th>53.2</th>
         </tr>
       </table>
+
       <h5 class="w3-padding-32">Accountability</h5>
-      <p class="w3-text-grey">The data comes directly from the NBA.com/stats API, so it should be trustworthy.</p>
+      <p class="w3-text-grey">The two datasets comes directly from the NBA.com/stats API and China nba dataset, so it should be trustworthy.</p>
     </div>
 
     <div class="w3-third w3-center">
@@ -160,7 +161,7 @@ function myFunction() {
     var x = document.getElementById("navDemo");
     if (x.className.indexOf("w3-show") == -1) {
         x.className += " w3-show";
-    } else { 
+    } else {
         x.className = x.className.replace(" w3-show", "");
     }
 }

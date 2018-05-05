@@ -46,9 +46,8 @@ html, body, h1, h2, h3, h4, h5, h6 {
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-threequarter">
-    <h1>SHOT MAKES PREDICTION MODEL</h1>
-    <h2>Model Results</h2>
-      <p class="w3-text-grey">The models that were fit include: logistic regression, linear discriminant analysis, kNN, CART, NB, and SVM. The models were fit and tested using 10 fold cross validation. Logistic regression was used as the prediction model as it managed to predict with the highest accuracy. However, it must be noted that none of the models predicted particularly well. Logistic regression was only able to predict shot makes with 60.6% accuracy which is only 10% higher than random selection. The other models performed even more poorly. Below is a box plot that displays a comparison of the test accuracy calculated using cross-validation for the different prediction models fit on the dataset.</p>  
+    <h1>Model Results</h1>
+      <p class="w3-text-grey">The models that were fit include: logistic regression, linear discriminant analysis, kNN, CART, and naive bayes. 20% of the data was held out and used as test data. The remaining 80% was used as training and were fit and tested using 10 fold cross validation. Logistic regression was used as the prediction model as it managed to predict with the highest accuracy. However, it must be noted that none of the models predicted particularly well. Logistic regression was only able to predict shot makes with 60.6% accuracy which is only 10% higher than random selection. The other models performed even more poorly. Below is a box plot that displays a comparison of the test accuracy calculated using cross-validation for the different prediction models fit on the dataset.</p>  
 
       <img src="./algcomp.png" height="500" width="500">
 
@@ -68,7 +67,7 @@ html, body, h1, h2, h3, h4, h5, h6 {
       <i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>
     </div>
     <div class="w3-threequarter">
-      <h2>Logistic Regression</h2>
+      <h1>Logistic Regression</h1>
       <h5 class="w3-padding-32">Summary of logistic regression co-efficients</h5>
       <table class="w3-table w3-bordered">
         <tr>
@@ -140,7 +139,7 @@ html, body, h1, h2, h3, h4, h5, h6 {
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-threequarter">
-    <h2>Conclusion and Final Thoughts</h2>
+    <h1>Conclusion and Final Thoughhts</h1>
       <p class="w3-text-grey">As discussed earlier, shot distance, dribbles, shot clock pressure, and defender distance are all factors that can moderately affect shot makes. If we were to run this experiment again, one possible way to further this process is to categorize the closest defenders into separate groups. For example, we can categorize them into position, player height, player size, wingspan length, and other factors of that nature to get a better idea of what types of defenders are more effective and contesting shots. We can also do this with the shooting player to try and create factors for what types of players are more likely to make shots. This would reduce the number of features associated with the player_id while also giving them weight. Another issue is the sample size. All our samples are from the same year, so we may be able to generate a bettter model if we had data from multiple years. Although 60% may not be an extremely accurate predictor, the truth is there are probably a number of hidden features that affect whether a shot is made. In this model, we are able to quantify 20% of what affects shot makes (10% better than random chance). </p>  
     </div>
     <div class="w3-third w3-center">
@@ -148,33 +147,6 @@ html, body, h1, h2, h3, h4, h5, h6 {
     </div>
   </div>
 </div>
-
-<div class="w3-row-padding w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-threequarter">
-    <h1>WIN RATE PREDICTION MODEL</h1>
-    <h2>Model Results</h2>
-      <p class="w3-text-grey">The model that was fit is a neural network with 4 fully connected intermediate layers. The training features include: the field goal percentage, three-point percentage, rebounds, assists, blocks, steals, turnovers, points gain and points lose. Below are two graphs that display the predicted and actual win rate of each team in season 1995 to 1996 and 2017 to 2018. </p>  
-
-      <div class='tableauPlaceholder' id='viz1525501148230' style='position: relative'><noscript><a href='#'><img alt='Dashboard 3 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ID&#47;IDSFinal3&#47;Dashboard3&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='IDSFinal3&#47;Dashboard3' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ID&#47;IDSFinal3&#47;Dashboard3&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1525501148230');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1000px';vizElement.style.height='827px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-
-      <br>
-      <p class="w3-text-grey">The Mean Squared Error of our prediction for the win rate in Season 1995 to 1996 is 0.008, which is somewhat better than our expectation. In particular, we get decent prediction on teams like Miami Heats, Houston Rockets, etc. </p> 
-      <br>
-      <h3> NBA 2018-2019 Predicted Win Rate and Standing</h3>
-      <img src="./2019.png" width="650">
-
-      <p class="w3-text-grey">This table shows our predicted win rate for next season. The teams that are marked red are the teams that can make it to the playoffs. We will be able to see how accurate they are by the end of next year. </p> 
-
-      
-    </div>
-
-    <div class="w3-third w3-center">
-      <i class="fa fa-anchor w3-padding-64 w3-text-red"></i>
-    </div>
-  </div>
-</div>
-
 
 <script>
 // Used to toggle the menu on small screens when clicking on the menu button
